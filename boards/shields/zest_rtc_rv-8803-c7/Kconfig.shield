@@ -1,0 +1,5 @@
+# Copyright (c) 2024 CATIE
+# SPDX-License-Identifier: Apache-2.0
+
+config SHIELD_ZEST_RTC_RV_8803_C7
+	def_bool $(shields_list_contains,zest_rtc_rv-8803-c7)

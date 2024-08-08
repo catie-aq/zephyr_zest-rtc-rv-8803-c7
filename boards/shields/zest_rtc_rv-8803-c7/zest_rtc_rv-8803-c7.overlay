@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2024, CATIE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ / {
+	aliases {
+		rtc = &rv_8803_c7;
+	};
+};
+
+&sixtron_i2c {
+	status = "okay";
+	rv_8803_c7: rv-8803-c7@32 {
+		compatible = "microcrystal,rv-8803-c7";
+		reg = <0x32>;
+	};
+};
