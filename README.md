@@ -10,4 +10,4 @@ This board enables the following drivers:
 
 💡 Drivers should also be added to your workspace:
 
-- [RV-8803-C7 driver](https://github.com/catie-aq/zephyr_microcrystal-rv-8803-c7) for Zephyr OS
+- [RV-8803 driver](https://github.com/catie-aq/zephyr_microcrystal-rv8803) for Zephyr OS
