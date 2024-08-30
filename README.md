@@ -4,7 +4,7 @@ Zest_RTC_RV-8803-C7 board support for Zephyr OS.
 
 ## Usage
 
-This board enables the following drivers:
+This board enables the following components:
 
 - [Micro Crystal AG RV-8803-C7](https://www.microcrystal.com/en/products/real-time-clock-rtc-modules/rv-8803-c7/) RTC
 
