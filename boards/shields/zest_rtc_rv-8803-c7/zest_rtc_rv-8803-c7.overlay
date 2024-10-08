@@ -6,8 +6,8 @@
  / {
 	aliases {
 		rv8803 = &rv88030;
-		rv8803_rtc = &rv88030_rtc;
-		rv8803_clk = &rv88030_rtc;
+		rtc8803 = &rv88030_rtc;
+		clk8803 = &rv88030_clk;
 	};
 };
 
