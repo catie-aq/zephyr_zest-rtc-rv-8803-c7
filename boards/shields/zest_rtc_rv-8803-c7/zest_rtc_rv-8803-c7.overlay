@@ -23,7 +23,7 @@
 			irq-gpios = <&sixtron_connector DIO2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 		};
 
-		rv8803_clk {
+		rv88030_clk: rv8803-clk {
 			compatible = "microcrystal,rv8803-clk";
 			#clock-cells = <0>;
 		};
