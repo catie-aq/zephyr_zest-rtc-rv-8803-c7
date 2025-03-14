@@ -29,17 +29,6 @@
 		}; \
 	};
 
-#define ALIASES_ZEST_RTC_RV8803_C7(port) \
-	/ { \
-		aliases { \
-			mfd-rv8803 = &mfd_zest_rtc_rv8803_##port; \
-			rtc-rv8803 = &rtc_zest_rtc_rv8803_##port; \
-			counter-rv8803 = &counter_zest_rtc_rv8803_##port; \
-			clock-rv8803 = &clock_zest_rtc_rv8803_##port; \
-		}; \
-	};
-
 #define ZEST_RTC_RV8803_C7(port) \
 	PERIPHERAL_ZEST_RTC_RV8803_C7(port) \
-	DRIVERS_ZEST_RTC_RV8803_C7(port) \
-	ALIASES_ZEST_RTC_RV8803_C7(port)
+	DRIVERS_ZEST_RTC_RV8803_C7(port)
