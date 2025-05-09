@@ -5,16 +5,16 @@
 
 #include <zephyr/dt-bindings/gpio/sixtron-header.h>
 
-#define PERIPHERAL_ZEST_RTC_RV8803_C7(port) \
+#define PERIPHERAL_ZEST_RTC_RV8803_C7_ALT(port) \
 	i2c_zest_rtc_rv8803_##port: &sixtron_connector_##port##_i2c {};
 
-#define DRIVERS_ZEST_RTC_RV8803_C7(port) \
+#define DRIVERS_ZEST_RTC_RV8803_C7_ALT(port, irq_pin) \
 	&i2c_zest_rtc_rv8803_##port { \
 		status = "okay"; \
 		mfd_zest_rtc_rv8803_##port: rv8803##port@32 { \
 			compatible = "microcrystal,rv8803"; \
 			reg = <0x32>; \
-			irq-gpios = <&sixtron_connector_##port DIO2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; \
+			irq-gpios = <&sixtron_connector_##port irq_pin (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; \
 			rtc_zest_rtc_rv8803_##port: rv8803-rtc##port { \
 				compatible = "microcrystal,rv8803-rtc"; \
 			}; \
@@ -29,7 +29,7 @@
 		}; \
 	};
 
-#define ALIASES_ZEST_RTC_RV8803_C7(port) \
+#define ALIASES_ZEST_RTC_RV8803_C7_ALT(port) \
 	/ { \
 		aliases { \
 			mfd-rv8803 = &mfd_zest_rtc_rv8803_##port; \
@@ -39,7 +39,7 @@
 		}; \
 	};
 
-#define ZEST_RTC_RV8803_C7(port) \
-	PERIPHERAL_ZEST_RTC_RV8803_C7(port) \
-	DRIVERS_ZEST_RTC_RV8803_C7(port) \
-	ALIASES_ZEST_RTC_RV8803_C7(port)
+#define ZEST_RTC_RV8803_C7_ALT(port, irq) \
+	PERIPHERAL_ZEST_RTC_RV8803_C7_ALT(port) \
+	DRIVERS_ZEST_RTC_RV8803_C7_ALT(port, irq) \
+	ALIASES_ZEST_RTC_RV8803_C7_ALT(port)
