@@ -38,5 +38,10 @@ In that case, use instead the alternate variant of the shield:
 
 - Update your device tree by adding the `ZEST_RTC_RV8803_C7_ALT(port, irq)` macro to the `app.overlay` file, with:
   - `port`: number of the Zest_Core port to which the shield is connected,
-  - `irq`: MFD module IRQ pin.
+  - `irq`: MFD module IRQ pin (cf. [6tron connector](https://github.com/catie-aq/zephyr_6tron-connector/blob/main/dts/bindings/sixtron-bus.yaml)).
+
+  ```c
+  ZEST_RTC_RV8803_C7_ALT(1, DIO2) /* Zest_RTC_RV-8803-C7 connected to Zest_Core first port */
+  ```
+
 - Activate support for the shield by adding `--shield zest_rtc_rv-8803-c7_alt` to the west command.
