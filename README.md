@@ -28,7 +28,7 @@ This board enables the following component:
   ZEST_RTC_RV8803_C7(1) /* Zest_RTC_RV-8803-C7 connected to Zest_Core first port */
   ```
 
-- Activate support for the shield by adding `--shield zest_rtc_rv-8803-c7` to the west command.
+- Activate support for the shield by adding `--shield zest_rtc_rv8803-c7` to the west command.
 
 ## Advanced Usage
 
@@ -44,4 +44,4 @@ In that case, use instead the alternate variant of the shield:
   ZEST_RTC_RV8803_C7_ALT(1, DIO2) /* Zest_RTC_RV-8803-C7 connected to Zest_Core first port */
   ```
 
-- Activate support for the shield by adding `--shield zest_rtc_rv-8803-c7_alt` to the west command.
+- Activate support for the shield by adding `--shield zest_rtc_rv8803-c7_alt` to the west command.
