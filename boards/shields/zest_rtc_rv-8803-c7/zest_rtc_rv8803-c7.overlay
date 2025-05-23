@@ -12,18 +12,18 @@
 	&i2c_zest_rtc_rv8803_##port { \
 		status = "okay"; \
 		mfd_zest_rtc_rv8803_##port: rv8803##port@32 { \
-			compatible = "microcrystal,rv8803"; \
+			compatible = "microcrystal,rv8803-catie"; \
 			reg = <0x32>; \
 			irq-gpios = <&sixtron_connector_##port DIO2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; \
 			rtc_zest_rtc_rv8803_##port: rv8803-rtc##port { \
-				compatible = "microcrystal,rv8803-rtc"; \
+				compatible = "microcrystal,rv8803-rtc-catie"; \
 			}; \
 			counter_zest_rtc_rv8803_##port: rv8803-cnt##port { \
-				compatible = "microcrystal,rv8803-cnt"; \
+				compatible = "microcrystal,rv8803-cnt-catie"; \
 				frequency = "1"; \
 			}; \
 			clock_zest_rtc_rv8803_##port: rv8803-clk##port { \
-				compatible = "microcrystal,rv8803-clk"; \
+				compatible = "microcrystal,rv8803-clk-catie"; \
 				#clock-cells = <0>; \
 			}; \
 		}; \
